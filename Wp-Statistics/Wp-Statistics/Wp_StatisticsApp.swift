@@ -2,7 +2,7 @@
 //  Wp_StatisticsApp.swift
 //  Wp-Statistics
 //
-//  Created by Kambiz on 2024-01-03.
+//  Created by Kambiz on 2024-01-25.
 //
 
 import SwiftUI
@@ -11,9 +11,7 @@ import SwiftUI
 struct Wp_StatisticsApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack{
-                WebsiteListView()
-            }
+            ContentView()
         }
     }
 }
