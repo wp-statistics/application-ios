@@ -11,7 +11,9 @@ import SwiftUI
 struct Wp_StatisticsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack{
+                LoaderView()
+            }
         }
     }
 }
