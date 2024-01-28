@@ -42,7 +42,12 @@ struct SideMenuFooterView: View {
         .padding(.horizontal)
     }
 }
-
-#Preview {
-    SideMenuFooterView()
+struct SideMenuFooterView_Preview : PreviewProvider{
+    static var previews: some View{
+        SideMenuFooterView()
+    }
 }
+
+//#Preview {
+//    SideMenuFooterView()
+//}

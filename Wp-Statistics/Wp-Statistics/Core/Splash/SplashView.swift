@@ -10,8 +10,9 @@ import SwiftUI
 struct SplashView: View {
     var body: some View {
         ZStack{
-            Color(.splashBackground).ignoresSafeArea()
-            
+//            Color(.splashBackground).ignoresSafeArea()
+            Color(.blue)
+                .ignoresSafeArea()
             VStack{
                 Image("splashLogo")
                     .resizable()
@@ -22,6 +23,12 @@ struct SplashView: View {
     }
 }
 
-#Preview {
-    SplashView()
+struct SplashView_Preview : PreviewProvider{
+    static var previews: some View{
+        SplashView()
+    }
 }
+
+//#Preview {
+//    SplashView()
+//}

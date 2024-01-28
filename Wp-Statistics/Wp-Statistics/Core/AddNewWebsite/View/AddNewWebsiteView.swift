@@ -68,7 +68,7 @@ struct AddNewWebsiteView: View {
         .navigationTitle("Add Website")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
+            ToolbarItem(placement: .navigationBarLeading) {
                 Image(systemName: "chevron.left")
                     .imageScale(.large)
                     .onTapGesture {
@@ -78,10 +78,15 @@ struct AddNewWebsiteView: View {
         }
     }
 }
-
-#Preview {
-    AddNewWebsiteView()
+struct AddNewWebsiteView_Preview : PreviewProvider{
+    static var previews: some View{
+        AddNewWebsiteView()
+    }
 }
+
+//#Preview {
+//    AddNewWebsiteView()
+//}
 
 struct TextFiledView: View {
     @Binding var textFiled: String

@@ -29,6 +29,12 @@ struct LoaderView: View {
     }
 }
 
-#Preview {
-    LoaderView()
+struct LoaderView_Preview : PreviewProvider{
+    static var previews: some View{
+        LoaderView()
+    }
 }
+
+//#Preview {
+//    LoaderView()
+//}

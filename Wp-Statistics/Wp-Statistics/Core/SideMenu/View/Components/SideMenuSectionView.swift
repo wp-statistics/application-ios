@@ -34,8 +34,16 @@ struct SideMenuSectionView: View {
     }
 }
 
-#Preview {
-    SideMenuSectionView(section: .home,
-                        isShowing: .constant(false),
-                        selectedOption: .constant(.home))
+struct SideMenuSectionView_Preview : PreviewProvider{
+    static var previews: some View{
+        SideMenuSectionView(section: .home,
+                            isShowing: .constant(false),
+                            selectedOption: .constant(.home))
+    }
 }
+
+//#Preview {
+//    SideMenuSectionView(section: .home,
+//                        isShowing: .constant(false),
+//                        selectedOption: .constant(.home))
+//}
