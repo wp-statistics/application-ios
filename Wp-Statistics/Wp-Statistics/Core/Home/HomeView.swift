@@ -15,11 +15,10 @@ struct HomeView: View {
             
             VStack(alignment: .leading){
                 Text("All Website")
-                    .font(.custom("Raleway", size: 24))
-                    .fontWeight(.bold)
+                    .font(.ralewaySize24Bold())
                 
                 ScrollView(showsIndicators: false){
-                    ForEach(0...3,id: \.self) { index in
+                    ForEach(0...1,id: \.self) { index in
                         WebsiteRowView()
                     }
                 }
@@ -38,18 +37,17 @@ struct WebsiteRowView: View {
     var body: some View {
         Rectangle()
             .frame(height: 142)
-            .foregroundStyle(.gray.opacity(0.2))
+            .foregroundStyle(.gray.opacity(0.1))
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .overlay {
                 VStack{
                     HStack{
                         VStack(alignment: .leading, spacing: 4.0){
                             Text("Vita Theme")
-                                .font(FontFamily.ralewayTitle)
-                                .fontWeight(.semibold)
+                                .font(.ralewaySize18())
                             
                             Text("https://vitathemes.com")
-                                .font(.custom("Raleway", size: 16))
+                                .font(.ralewaySize16())
                                 .tint(.gray)
                             
                         }
@@ -59,8 +57,7 @@ struct WebsiteRowView: View {
                         
                         VStack{
                             Text("Status")
-                                .font(.custom("Raleway", size: 14))
-                                .fontWeight(.regular)
+                                .font(.ralewaySize14())
                             
                             Image(systemName: "checkmark.circle.fill")
                                 .resizable()
@@ -97,8 +94,7 @@ struct WebsiteRowView: View {
                                 
                         } label: {
                             Text("Show more")
-                                .font(.custom("Raleway", size: 16))
-                                .fontWeight(.bold)
+                                .font(.ralewaySize16Bold())
                             
                             Image(systemName: "arrow.right")
                                 .resizable()

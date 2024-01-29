@@ -15,8 +15,8 @@ enum Constant{
 }
 
 enum FontFamily{
-    //coolvetica-rg.ttf
-    //Raleway-VariableFont_wght.ttf
     static let ralewayNormal: Font = Font.custom("Raleway", size: 15)
     static let ralewayTitle: Font = Font.custom("Raleway", size: 18)
 }
+
+
