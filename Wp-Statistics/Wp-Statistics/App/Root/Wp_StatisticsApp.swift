@@ -17,3 +17,4 @@ struct Wp_StatisticsApp: App {
         }
     }
 }
+

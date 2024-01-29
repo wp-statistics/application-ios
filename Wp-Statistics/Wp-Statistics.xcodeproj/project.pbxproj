@@ -24,6 +24,7 @@
 		080F13462B6318FD0011C72D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F13452B6318FD0011C72D /* SideMenuView.swift */; };
 		080F13482B631A8B0011C72D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F13472B631A8B0011C72D /* SplashView.swift */; };
 		080F134B2B6320E20011C72D /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F134A2B6320E20011C72D /* LoaderView.swift */; };
+		087309C82B683BDF002F8D73 /* VisitorCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087309C72B683BDF002F8D73 /* VisitorCellModel.swift */; };
 		08ACADEB2B65980900C4FF27 /* AddNewWebsiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ACADEA2B65980900C4FF27 /* AddNewWebsiteView.swift */; };
 		08ACADF02B65D90B00C4FF27 /* VisitorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ACADEF2B65D90B00C4FF27 /* VisitorsView.swift */; };
 		08ACADF42B65F3AB00C4FF27 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ACADF32B65F3AB00C4FF27 /* Color.swift */; };
@@ -49,6 +50,7 @@
 		08ACAE342B65F89700C4FF27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080F13242B63176F0011C72D /* Preview Assets.xcassets */; };
 		08ACAE352B65F89700C4FF27 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 080B7BBC2B64539700B70948 /* Raleway-VariableFont_wght.ttf */; };
 		08ACAE362B65F89700C4FF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080F13212B63176F0011C72D /* Assets.xcassets */; };
+		08ACAE3E2B66911800C4FF27 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ACAE3D2B66911800C4FF27 /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,6 +96,7 @@
 		080F13472B631A8B0011C72D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		080F13492B631F6B0011C72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		080F134A2B6320E20011C72D /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		087309C72B683BDF002F8D73 /* VisitorCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorCellModel.swift; sourceTree = "<group>"; };
 		08ACADEA2B65980900C4FF27 /* AddNewWebsiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWebsiteView.swift; sourceTree = "<group>"; };
 		08ACADEF2B65D90B00C4FF27 /* VisitorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorsView.swift; sourceTree = "<group>"; };
 		08ACADF32B65F3AB00C4FF27 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		08ACAE082B65F82A00C4FF27 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		08ACAE3B2B65F89700C4FF27 /* Wp-Statistics-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wp-Statistics-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ACAE3C2B65F89700C4FF27 /* Wp-Statistics copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Wp-Statistics copy-Info.plist"; path = "/Users/kambiz/Documents/IOS-Project/Wp-Statistics/application-ios/Wp-Statistics/Wp-Statistics copy-Info.plist"; sourceTree = "<absolute>"; };
+		08ACAE3D2B66911800C4FF27 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		087309C62B683BD2002F8D73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				087309C72B683BDF002F8D73 /* VisitorCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		08ACADE92B6597E200C4FF27 /* AddNewWebsite */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +288,7 @@
 		08ACADEC2B65D8D000C4FF27 /* Visitors */ = {
 			isa = PBXGroup;
 			children = (
+				087309C62B683BD2002F8D73 /* Model */,
 				08ACADEE2B65D8F600C4FF27 /* View */,
 			);
 			path = Visitors;
@@ -310,6 +323,7 @@
 			children = (
 				08ACADF32B65F3AB00C4FF27 /* Color.swift */,
 				08ACADF52B65F41700C4FF27 /* Constant.swift */,
+				08ACAE3D2B66911800C4FF27 /* Font.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -436,10 +450,12 @@
 				080F13392B6318630011C72D /* SideMenuOptionModel.swift in Sources */,
 				080F133B2B6318850011C72D /* SideMenuSections.swift in Sources */,
 				08ACADF02B65D90B00C4FF27 /* VisitorsView.swift in Sources */,
+				087309C82B683BDF002F8D73 /* VisitorCellModel.swift in Sources */,
 				08ACADEB2B65980900C4FF27 /* AddNewWebsiteView.swift in Sources */,
 				080F13462B6318FD0011C72D /* SideMenuView.swift in Sources */,
 				080F13482B631A8B0011C72D /* SplashView.swift in Sources */,
 				080F13402B6318B50011C72D /* SideMenuRowView.swift in Sources */,
+				08ACAE3E2B66911800C4FF27 /* Font.swift in Sources */,
 				080B7BC12B6453D000B70948 /* HomeView.swift in Sources */,
 				080F13442B6318E50011C72D /* SideMenuFooterView.swift in Sources */,
 				080F134B2B6320E20011C72D /* LoaderView.swift in Sources */,

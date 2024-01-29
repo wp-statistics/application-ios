@@ -7,26 +7,13 @@
 
 import SwiftUI
 
-struct VisitorCellModel: Identifiable {
-    let id = UUID()
-    let flag: String
-    let ip: String
-    let urlAddress: String
-    let browers: String
-    let date: String
-}
-extension VisitorCellModel{
-    static let visitors = Array(repeating: VisitorCellModel(flag: "Flag", ip: "220.181.51.113", urlAddress: "https://vitatheme.com", browers: "Chrome", date: "16 October 2024"), count: 5)
-}
-
-
 struct VisitorsView: View {
     @Environment (\.dismiss) var dismiss
     let visitors: [VisitorCellModel]
     
     var body: some View {
         
-        ScrollView{
+        ScrollView(showsIndicators: false){
             visitorCell
             
             .toolbar{
@@ -56,8 +43,7 @@ extension VisitorsView{
                             .frame(width: 24, height: 24)
                         
                         Text(visitor.ip)
-                            .font(.custom("Raleway", size: 16))
-                            .fontWeight(.regular)
+                            .font(.ralewaySize16())
                         
                         Spacer()
                         
@@ -76,8 +62,7 @@ extension VisitorsView{
                                 .frame(width: 24)
                          
                             Text(visitor.urlAddress)
-                                .font(.custom("Raleway", size: 16))
-                                .fontWeight(.regular)
+                                .font(.ralewaySize16())
                                 .tint(.black)
                         }
                     }
@@ -90,8 +75,7 @@ extension VisitorsView{
                                 .frame(width: 24)
                          
                             Text(visitor.date)
-                                .font(.custom("Raleway", size: 16))
-                                .fontWeight(.regular)
+                                .font(.ralewaySize16())
                                 .tint(.black)
                         }
                     }
@@ -103,6 +87,7 @@ extension VisitorsView{
             }
         }
         .frame(width: UIScreen.main.bounds.width - 36, alignment: .leading)
+        .padding(.top)
     }
 }
 
