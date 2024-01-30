@@ -12,36 +12,35 @@ struct SummaryView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false){
-            
             VStack(alignment: .leading){
                 HStack{
                     Spacer()
                     
                     Text("Visitors")
-                        .font(.ralewaySize16Bold())
+                        .font(.ralewaySize16Bold)
                     
                     Spacer()
                     
                     Text("Vistor")
-                        .font(.ralewaySize16Bold())
+                        .font(.ralewaySize16Bold)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal)
                 
                 HStack{
                     Text("Today")
-                        .font(.ralewaySize16Bold())
+                        .font(.ralewaySize16Bold)
                         
                     
                     Spacer()
                     
                     Text("48")
-                        .font(.ralewaySize16Bold())
+                        .font(.ralewaySize16Bold)
                     
                     Spacer()
                     
                     Text("134")
-                        .font(.ralewaySize16Bold())
+                        .font(.ralewaySize16Bold)
                 }
                 .frame(alignment: .leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -56,7 +55,8 @@ struct SummaryView: View {
             
             
             .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
+//                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Image(systemName: "chevron.left")
                         .imageScale(.large)
                         .onTapGesture {
@@ -70,6 +70,12 @@ struct SummaryView: View {
     }
 }
 
-#Preview {
-    SummaryView()
+struct SummaryView_Preview: PreviewProvider {
+    
+    static var previews: some View {
+        SummaryView()
+    }
 }
+//#Preview {
+//    SummaryView()
+//}

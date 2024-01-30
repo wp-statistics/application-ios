@@ -27,11 +27,11 @@ struct HomeHeaderView: View {
                     HStack{
                         VStack(alignment: .leading, spacing: 8.0){
                             Text("WP Statistics!")
-                                .font(.coolverticaTitle())
+                                .font(.coolverticaTitle)
                                 .foregroundStyle(.white)
                             
                             Text("Track visits, get reports, and see your audience grow.")
-                                .font(.ralewaySize15())
+                                .font(.ralewaySize15)
                                 .foregroundStyle(.white)
 
                             NavigationLink {
@@ -51,7 +51,7 @@ struct HomeHeaderView: View {
                                                 .foregroundStyle(.black)
                                             
                                             Text("Add Website")
-                                                .font(.ralewaySize15())
+                                                .font(.ralewaySize15)
                                                 .foregroundStyle(.black)
                                         }
                                     }
