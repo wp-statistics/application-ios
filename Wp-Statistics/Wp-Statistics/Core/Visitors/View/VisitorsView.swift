@@ -17,7 +17,7 @@ struct VisitorsView: View {
             visitorCell
             
             .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Image(systemName: "chevron.left")
                         .imageScale(.large)
                         .onTapGesture {
@@ -91,6 +91,12 @@ extension VisitorsView{
     }
 }
 
-#Preview {
-    VisitorsView(visitors: VisitorCellModel.visitors)
+struct VisitorsView_Preview : PreviewProvider{
+    static var previews: some View{
+        VisitorsView(visitors: VisitorCellModel.visitors)
+    }
 }
+
+//#Preview {
+//    VisitorsView(visitors: VisitorCellModel.visitors)
+//}

@@ -81,6 +81,13 @@ struct HomeHeaderView: View {
     }
 }
 
-#Preview {
-    HomeHeaderView()
+struct HomeHeaderView_Preview : PreviewProvider{
+    static var previews: some View{
+        HomeHeaderView()
+    }
 }
+
+//
+//#Preview {
+//    HomeHeaderView()
+//}

@@ -29,9 +29,15 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView()
+struct HomeView_Preview : PreviewProvider{
+    static var previews: some View{
+        HomeView()
+    }
 }
+
+//#Preview {
+//    HomeView()
+//}
 
 struct WebsiteRowView: View {
     var body: some View {

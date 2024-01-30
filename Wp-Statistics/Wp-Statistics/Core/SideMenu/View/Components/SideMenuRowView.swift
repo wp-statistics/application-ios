@@ -30,11 +30,19 @@ struct SideMenuRowView: View {
         .padding(.leading)
         .foregroundStyle(isSelectedOption ? .primary : .primary)
         .frame(width: 216, height: 44)
-        .background(isSelectedOption ? .menuSelection : .clear)
+//        .background(isSelectedOption ? .menuSelection : .clear)
+        .background(isSelectedOption ? .red : .clear)
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
-#Preview {
-    SideMenuRowView(option: .home, selectedOption: .constant(.home))
+struct SideMenuRowView_Preview : PreviewProvider{
+    static var previews: some View{
+        SideMenuRowView(option: .home, selectedOption: .constant(.home))
+    }
 }
+
+
+//#Preview {
+//    SideMenuRowView(option: .home, selectedOption: .constant(.home))
+//}

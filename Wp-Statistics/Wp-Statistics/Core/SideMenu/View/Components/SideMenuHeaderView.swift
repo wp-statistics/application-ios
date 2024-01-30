@@ -21,6 +21,13 @@ struct SideMenuHeaderView: View {
     }
 }
 
-#Preview {
-    SideMenuHeaderView()
+struct SideMenuHeaderView_Preview : PreviewProvider{
+    static var previews: some View{
+        SideMenuHeaderView()
+    }
 }
+
+
+//#Preview {
+//    SideMenuHeaderView()
+//}

@@ -38,7 +38,8 @@ struct SideMenuView: View {
                     }
                     .padding()
                     .frame(width: 270, alignment: .leading)
-                    .background(.menuBackground)
+//                    .background(.menuBackground)
+                    .background(.green)
                     
                     Spacer()
                 }
@@ -54,6 +55,13 @@ struct SideMenuView: View {
     }
 }
 
-#Preview {
-    SideMenuView(isShowing: .constant(true), selectedOption: .constant(.home))
+
+struct SideMenuView_Preview : PreviewProvider{
+    static var previews: some View{
+        SideMenuView(isShowing: .constant(true), selectedOption: .constant(.home))
+    }
 }
+
+//#Preview {
+//    SideMenuView(isShowing: .constant(true), selectedOption: .constant(.home))
+//}

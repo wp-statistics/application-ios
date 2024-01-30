@@ -49,7 +49,7 @@ struct MainView: View {
             .navigationTitle(selectedOption?.title ?? "Dashborad")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         showMenu.toggle()
                     } label: {
@@ -70,6 +70,12 @@ struct MainView: View {
     }
 }
 
-#Preview {
-    MainView()
+struct MainView_Preview : PreviewProvider{
+    static var previews: some View{
+        MainView()
+    }
 }
+
+//#Preview {
+//    MainView()
+//}
