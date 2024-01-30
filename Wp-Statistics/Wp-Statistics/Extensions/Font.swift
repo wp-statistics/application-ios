@@ -9,32 +9,14 @@ import Foundation
 import SwiftUI
 
 extension Font {
-    
-    static func ralewaySize24Bold() -> Font {
-        return Font.custom(RalewayFont.Name.rawValue, size: 24).weight(.semibold)
-    }
-    static func ralewaySize18() -> Font {
-        return Font.custom(RalewayFont.Name.rawValue, size: 18).weight(.semibold)
-    }
-    static func ralewaySize16() -> Font {
-        return Font.custom(RalewayFont.Name.rawValue, size: 16).weight(.regular)
-    }
-    static func ralewaySize16Bold() -> Font {
-        return Font.custom(RalewayFont.Name.rawValue, size: 16).weight(.bold)
-    }
-    static func ralewaySize15() -> Font {
-        return Font.custom(RalewayFont.Name.rawValue, size: 14).weight(.regular)
-    }
-    static func ralewaySize15Medium() -> Font {
-        return Font.custom(RalewayFont.Name.rawValue, size: 15).weight(.medium)
-    }
-    static func ralewaySize14() -> Font {
-        return Font.custom(RalewayFont.Name.rawValue, size: 14).weight(.regular)
-    }
-    
-    static func coolverticaTitle() -> Font {
-        return Font.custom(CoolveticaFont.Name.rawValue, size: 34)
-    }
+    static let ralewaySize24Bold = Font.custom(RalewayFont.Name.rawValue, size: 24).weight(.semibold)
+    static let ralewaySize18 = Font.custom(RalewayFont.Name.rawValue, size: 18).weight(.semibold)
+    static let ralewaySize16 = Font.custom(RalewayFont.Name.rawValue, size: 16).weight(.regular)
+    static let ralewaySize16Bold = Font.custom(RalewayFont.Name.rawValue, size: 16).weight(.bold)
+    static let ralewaySize15 = Font.custom(RalewayFont.Name.rawValue, size: 14).weight(.regular)
+    static let ralewaySize15Medium = Font.custom(RalewayFont.Name.rawValue, size: 15).weight(.medium)
+    static let ralewaySize14 = Font.custom(RalewayFont.Name.rawValue, size: 14).weight(.regular)
+    static let coolverticaTitle = Font.custom(CoolveticaFont.Name.rawValue, size: 34)
 }
 enum RalewayFont: String {
     case Name = "Raleway"
