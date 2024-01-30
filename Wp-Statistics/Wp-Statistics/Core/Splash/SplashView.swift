@@ -11,7 +11,7 @@ struct SplashView: View {
     var body: some View {
         ZStack{
 //            Color(.splashBackground).ignoresSafeArea()
-            Color(.blue)
+            Color(.splashBackground)
                 .ignoresSafeArea()
             VStack{
                 Image("splashLogo")

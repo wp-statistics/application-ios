@@ -95,7 +95,8 @@ struct WebsiteRowView: View {
                         Spacer()
                         
                         NavigationLink {
-                            VisitorsView(visitors: VisitorCellModel.visitors)
+                            //VisitorsView(visitors: VisitorCellModel.visitors)
+                            SummaryView()
                                 .navigationBarBackButtonHidden()
                                 
                         } label: {
