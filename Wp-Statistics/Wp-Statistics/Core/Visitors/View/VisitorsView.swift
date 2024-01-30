@@ -86,7 +86,7 @@ extension VisitorsView{
                     .padding(.horizontal)
             }
         }
-        .frame(width: UIScreen.main.bounds.width - 36, alignment: .leading)
+        .frame(width: UIScreen.main.bounds.width - 18, alignment: .leading)
         .padding(.top)
     }
 }
