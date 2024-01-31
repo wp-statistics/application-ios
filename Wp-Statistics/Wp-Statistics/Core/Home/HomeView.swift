@@ -15,7 +15,7 @@ struct HomeView: View {
             
             VStack(alignment: .leading){
                 Text("All Website")
-                    .font(.ralewaySize24Bold())
+                    .font(.ralewaySize24Bold)
                 
                 ScrollView(showsIndicators: false){
                     ForEach(0...1,id: \.self) { index in
@@ -50,10 +50,10 @@ struct WebsiteRowView: View {
                     HStack{
                         VStack(alignment: .leading, spacing: 4.0){
                             Text("Vita Theme")
-                                .font(.ralewaySize18())
+                                .font(.ralewaySize18)
                             
                             Text("https://vitathemes.com")
-                                .font(.ralewaySize16())
+                                .font(.ralewaySize16)
                                 .tint(.gray)
                             
                         }
@@ -63,7 +63,7 @@ struct WebsiteRowView: View {
                         
                         VStack{
                             Text("Status")
-                                .font(.ralewaySize14())
+                                .font(.ralewaySize14)
                             
                             Image(systemName: "checkmark.circle.fill")
                                 .resizable()
@@ -101,7 +101,7 @@ struct WebsiteRowView: View {
                                 
                         } label: {
                             Text("Show more")
-                                .font(.ralewaySize16Bold())
+                                .font(.ralewaySize16Bold)
                             
                             Image(systemName: "arrow.right")
                                 .resizable()

@@ -43,7 +43,7 @@ extension VisitorsView{
                             .frame(width: 24, height: 24)
                         
                         Text(visitor.ip)
-                            .font(.ralewaySize16())
+                            .font(.ralewaySize16)
                         
                         Spacer()
                         
@@ -62,7 +62,7 @@ extension VisitorsView{
                                 .frame(width: 24)
                          
                             Text(visitor.urlAddress)
-                                .font(.ralewaySize16())
+                                .font(.ralewaySize16)
                                 .tint(.black)
                         }
                     }
@@ -75,7 +75,7 @@ extension VisitorsView{
                                 .frame(width: 24)
                          
                             Text(visitor.date)
-                                .font(.ralewaySize16())
+                                .font(.ralewaySize16)
                                 .tint(.black)
                         }
                     }
