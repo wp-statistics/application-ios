@@ -53,6 +53,12 @@
 		08ACAE352B65F89700C4FF27 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 080B7BBC2B64539700B70948 /* Raleway-VariableFont_wght.ttf */; };
 		08ACAE362B65F89700C4FF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080F13212B63176F0011C72D /* Assets.xcassets */; };
 		08ACAE3E2B66911800C4FF27 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ACAE3D2B66911800C4FF27 /* Font.swift */; };
+		30DAF1892B6AFB8100A407FB /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF1882B6AFB8100A407FB /* ChartView.swift */; };
+		30DAF18A2B6AFB8100A407FB /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF1882B6AFB8100A407FB /* ChartView.swift */; };
+		30DAF18C2B6AFC4900A407FB /* ChartInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF18B2B6AFC4900A407FB /* ChartInfo.swift */; };
+		30DAF18D2B6AFC4900A407FB /* ChartInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF18B2B6AFC4900A407FB /* ChartInfo.swift */; };
+		30DAF1922B6AFDFA00A407FB /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF1912B6AFDFA00A407FB /* ChartModel.swift */; };
+		30DAF1932B6AFDFA00A407FB /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF1912B6AFDFA00A407FB /* ChartModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -110,6 +116,9 @@
 		08ACAE3B2B65F89700C4FF27 /* Wp-Statistics-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wp-Statistics-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ACAE3C2B65F89700C4FF27 /* Wp-Statistics copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Wp-Statistics copy-Info.plist"; path = "/Users/kambiz/Documents/IOS-Project/Wp-Statistics/application-ios/Wp-Statistics/Wp-Statistics copy-Info.plist"; sourceTree = "<absolute>"; };
 		08ACAE3D2B66911800C4FF27 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		30DAF1882B6AFB8100A407FB /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		30DAF18B2B6AFC4900A407FB /* ChartInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfo.swift; sourceTree = "<group>"; };
+		30DAF1912B6AFDFA00A407FB /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				08572C1E2B68B7F200CBD555 /* SummaryModel.swift */,
+				30DAF1912B6AFDFA00A407FB /* ChartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +312,7 @@
 		087309CA2B685095002F8D73 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30DAF1872B6AFB4600A407FB /* Chart */,
 				087309CB2B6850A1002F8D73 /* SummaryView.swift */,
 			);
 			path = View;
@@ -365,6 +376,15 @@
 				08ACAE082B65F82A00C4FF27 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30DAF1872B6AFB4600A407FB /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				30DAF1882B6AFB8100A407FB /* ChartView.swift */,
+				30DAF18B2B6AFC4900A407FB /* ChartInfo.swift */,
+			);
+			path = Chart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,7 +497,9 @@
 				080F13202B63176D0011C72D /* MainView.swift in Sources */,
 				080F131E2B63176D0011C72D /* Wp_StatisticsApp.swift in Sources */,
 				08ACADF42B65F3AB00C4FF27 /* Color.swift in Sources */,
+				30DAF1892B6AFB8100A407FB /* ChartView.swift in Sources */,
 				080F13392B6318630011C72D /* SideMenuOptionModel.swift in Sources */,
+				30DAF18C2B6AFC4900A407FB /* ChartInfo.swift in Sources */,
 				080F133B2B6318850011C72D /* SideMenuSections.swift in Sources */,
 				08ACADF02B65D90B00C4FF27 /* VisitorsView.swift in Sources */,
 				087309C82B683BDF002F8D73 /* VisitorCellModel.swift in Sources */,
@@ -490,6 +512,7 @@
 				08572C1F2B68B7F200CBD555 /* SummaryModel.swift in Sources */,
 				087309CC2B6850A1002F8D73 /* SummaryView.swift in Sources */,
 				080F13442B6318E50011C72D /* SideMenuFooterView.swift in Sources */,
+				30DAF1922B6AFDFA00A407FB /* ChartModel.swift in Sources */,
 				080F134B2B6320E20011C72D /* LoaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,10 +522,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				08ACAE202B65F89700C4FF27 /* SideMenuHeaderView.swift in Sources */,
+				30DAF18D2B6AFC4900A407FB /* ChartInfo.swift in Sources */,
 				08ACAE212B65F89700C4FF27 /* Constant.swift in Sources */,
 				08ACAE222B65F89700C4FF27 /* SideMenuSectionView.swift in Sources */,
 				08ACAE232B65F89700C4FF27 /* HomeHeaderView.swift in Sources */,
 				08ACAE242B65F89700C4FF27 /* MainView.swift in Sources */,
+				30DAF18A2B6AFB8100A407FB /* ChartView.swift in Sources */,
 				08ACAE252B65F89700C4FF27 /* Wp_StatisticsApp.swift in Sources */,
 				08ACAE262B65F89700C4FF27 /* Color.swift in Sources */,
 				08ACAE272B65F89700C4FF27 /* SideMenuOptionModel.swift in Sources */,
@@ -510,6 +535,7 @@
 				08ACAE292B65F89700C4FF27 /* VisitorsView.swift in Sources */,
 				08ACAE2A2B65F89700C4FF27 /* AddNewWebsiteView.swift in Sources */,
 				08ACAE2B2B65F89700C4FF27 /* SideMenuView.swift in Sources */,
+				30DAF1932B6AFDFA00A407FB /* ChartModel.swift in Sources */,
 				08ACAE2C2B65F89700C4FF27 /* SplashView.swift in Sources */,
 				08ACAE2D2B65F89700C4FF27 /* SideMenuRowView.swift in Sources */,
 				08ACAE2E2B65F89700C4FF27 /* HomeView.swift in Sources */,
