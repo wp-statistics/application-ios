@@ -47,7 +47,7 @@ struct AddNewWebsiteView: View {
                                     .frame(width: 24, height: 24)
                                 
                                 Text("Add New Website")
-                                    .font(.ralewaySize16Bold())
+                                    .font(.ralewaySize16Bold)
                                     .foregroundStyle(.white)
                             }
                         }
@@ -57,7 +57,7 @@ struct AddNewWebsiteView: View {
             Spacer()
             
             Text("Please keep in mind, to connect to the website, the REST API add-On needs to be in installed on your WordPress.")
-                .font(.ralewaySize16())
+                .font(.ralewaySize16)
                 .padding(.horizontal, 30.0)
                 .lineSpacing(3)
                 .tracking(1.0)
@@ -94,7 +94,7 @@ struct TextFiledView: View {
     var body: some View {
         VStack(alignment: .leading){
             Text(title)
-                .font(.ralewaySize14())
+                .font(.ralewaySize14)
                 .foregroundStyle(.gray.opacity(0.8))
             
             Rectangle()
