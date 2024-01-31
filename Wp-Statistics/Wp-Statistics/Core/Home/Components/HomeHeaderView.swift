@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeHeaderView: View {
-    @State private var isImageLoaded = false
     
     var body: some View {
         ZStack{
