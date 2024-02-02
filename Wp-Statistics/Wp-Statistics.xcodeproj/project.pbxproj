@@ -59,6 +59,8 @@
 		30DAF18D2B6AFC4900A407FB /* ChartInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF18B2B6AFC4900A407FB /* ChartInfo.swift */; };
 		30DAF1922B6AFDFA00A407FB /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF1912B6AFDFA00A407FB /* ChartModel.swift */; };
 		30DAF1932B6AFDFA00A407FB /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF1912B6AFDFA00A407FB /* ChartModel.swift */; };
+		30DAF1952B6DA73900A407FB /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF1942B6DA73900A407FB /* PieChart.swift */; };
+		30DAF1962B6DA73900A407FB /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAF1942B6DA73900A407FB /* PieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,6 +121,7 @@
 		30DAF1882B6AFB8100A407FB /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		30DAF18B2B6AFC4900A407FB /* ChartInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfo.swift; sourceTree = "<group>"; };
 		30DAF1912B6AFDFA00A407FB /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
+		30DAF1942B6DA73900A407FB /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +386,7 @@
 			children = (
 				30DAF1882B6AFB8100A407FB /* ChartView.swift */,
 				30DAF18B2B6AFC4900A407FB /* ChartInfo.swift */,
+				30DAF1942B6DA73900A407FB /* PieChart.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -499,6 +503,7 @@
 				08ACADF42B65F3AB00C4FF27 /* Color.swift in Sources */,
 				30DAF1892B6AFB8100A407FB /* ChartView.swift in Sources */,
 				080F13392B6318630011C72D /* SideMenuOptionModel.swift in Sources */,
+				30DAF1952B6DA73900A407FB /* PieChart.swift in Sources */,
 				30DAF18C2B6AFC4900A407FB /* ChartInfo.swift in Sources */,
 				080F133B2B6318850011C72D /* SideMenuSections.swift in Sources */,
 				08ACADF02B65D90B00C4FF27 /* VisitorsView.swift in Sources */,
@@ -524,6 +529,7 @@
 				08ACAE202B65F89700C4FF27 /* SideMenuHeaderView.swift in Sources */,
 				30DAF18D2B6AFC4900A407FB /* ChartInfo.swift in Sources */,
 				08ACAE212B65F89700C4FF27 /* Constant.swift in Sources */,
+				30DAF1962B6DA73900A407FB /* PieChart.swift in Sources */,
 				08ACAE222B65F89700C4FF27 /* SideMenuSectionView.swift in Sources */,
 				08ACAE232B65F89700C4FF27 /* HomeHeaderView.swift in Sources */,
 				08ACAE242B65F89700C4FF27 /* MainView.swift in Sources */,
