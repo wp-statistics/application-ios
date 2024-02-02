@@ -19,7 +19,6 @@ struct ChartView: View{
                 chartContainer(chartData: chartData)
                     .padding()
             }
-            
         }
     }
 }
@@ -33,6 +32,7 @@ extension ChartView{
             Text("User Onlie: 32")
                 .font(.headline)
                 .padding(.top)
+    
             HStack{
                 
                 Text("Visitors")
@@ -72,12 +72,13 @@ extension ChartView{
                     .gridCellUnsizedAxes([.horizontal])
             }
         }
+        
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
     func chartInfoTable(chartInfo: [ChartModel]) -> some View{
         
-        VStack(){
+        VStack{
             
             Grid(alignment: .leading, horizontalSpacing: 10, verticalSpacing: 10) {
                 chartInfoHeader
@@ -86,6 +87,7 @@ extension ChartView{
                 }
             }
         }.padding()
+        
     }
     
     func chartContainer(chartData: [ChartModel]) -> some View{
