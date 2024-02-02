@@ -99,6 +99,10 @@ extension ChartView{
                 .foregroundStyle(.blue)
                 .position(by: .value("Visitors", $0.visitorsCount))
         }
+        .foregroundStyle(.black)
+        .padding()
+        .shadow(radius: 4)
+        .background(.white)
     }
 }
 
@@ -117,3 +121,4 @@ struct ChartView_Preview: PreviewProvider {
         )
     }
 }
+
