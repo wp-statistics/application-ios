@@ -14,3 +14,5 @@ struct ChartModel: Identifiable{
     let visitorCount: Int
     let isShowDivider: Bool
 }
+
+

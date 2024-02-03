@@ -8,13 +8,10 @@
 import SwiftUI
 import Charts
 
-struct SummaryModel: Identifiable {
-    let id: UUID
-}
 
 struct SummaryView: View {
     @Environment (\.dismiss) var dismiss
-    //let chartData: [ChartModel]
+    let summaryModel: SummaryModel
     
     var body: some View {
         ScrollView(showsIndicators: false){
@@ -25,7 +22,7 @@ struct SummaryView: View {
                     .scaledToFit()
                     .frame(width: 28, height: 28)
                 
-                Text("User Onlie: \(32)")
+                Text("User Onlie: \(summaryModel.userOnline)")
                     .font(.headline)
             }
             .frame(width: UIScreen.main.bounds.width - 36, alignment: .leading)
@@ -53,12 +50,12 @@ struct SummaryView: View {
                 .padding(.bottom, 12)
                 
                 
-                SummaryHeaderRowView(title: "Tody", visitorsCount: 48, visitorCount: 123, isShowDivider: true)
-                SummaryHeaderRowView(title: "Yesterday", visitorsCount: 854, visitorCount: 4231, isShowDivider: true)
-                SummaryHeaderRowView(title: "Week", visitorsCount: 24313, visitorCount: 23423, isShowDivider: true)
-                SummaryHeaderRowView(title: "Month", visitorsCount: 145060, visitorCount: 195832, isShowDivider: true)
-                SummaryHeaderRowView(title: "Year", visitorsCount: 8594323, visitorCount: 10243252, isShowDivider: true)
-                SummaryHeaderRowView(title: "Total", visitorsCount: 8943333411, visitorCount: 11323432232, isShowDivider: false)
+                SummaryHeaderRowView(title: "Tody", visitorsCount: summaryModel.visitors.today, visitorCount: summaryModel.visitor.today, isShowDivider: true)
+                SummaryHeaderRowView(title: "Yesterday", visitorsCount: summaryModel.visitors.yesterday, visitorCount: summaryModel.visitor.yesterday, isShowDivider: true)
+                SummaryHeaderRowView(title: "Week", visitorsCount: summaryModel.visitors.week, visitorCount: summaryModel.visitor.week, isShowDivider: true)
+                SummaryHeaderRowView(title: "Month", visitorsCount: summaryModel.visitors.month, visitorCount: summaryModel.visitor.month, isShowDivider: true)
+                SummaryHeaderRowView(title: "Year", visitorsCount: summaryModel.visitors.year, visitorCount: summaryModel.visitor.year, isShowDivider: true)
+                SummaryHeaderRowView(title: "Total", visitorsCount: summaryModel.visitors.total, visitorCount: summaryModel.visitor.total, isShowDivider: false)
                     .padding(.bottom, 12)
                 
                 
@@ -119,7 +116,7 @@ struct SummaryView: View {
             .navigationTitle("Summary")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .background(Color.red.opacity(0.5))
+        //.background(Color.red.opacity(0.5))
     }
 }
 
@@ -160,6 +157,6 @@ struct SummaryHeaderRowView: View {
 
 struct SummaryView_Preview : PreviewProvider{
     static var previews: some View{
-        SummaryView()
+        SummaryView(summaryModel: .summaryMock)
     }
 }
