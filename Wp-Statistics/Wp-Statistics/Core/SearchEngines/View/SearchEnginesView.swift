@@ -1,50 +1,50 @@
 //
-//  SummaryView.swift
+//  SearchEnginesView.swift
 //  Wp-Statistics
 //
-//  Created by Kambiz on 2024-01-29.
+//  Created by Kambiz on 2024-02-02.
 //
 
 import SwiftUI
-import Charts
 
-struct SummaryModel: Identifiable {
-    let id: UUID
-}
-
-struct SummaryView: View {
-    @Environment (\.dismiss) var dismiss
-    //let chartData: [ChartModel]
+struct SearchEnginesView: View {
+    @Environment(\.dismiss) var dismiss
+    let searchEnginModel: [SearchEnginesModel]
     
     var body: some View {
         ScrollView(showsIndicators: false){
-
             HStack{
-                Image(systemName: "person.fill")
+                Image(systemName: "magnifyingglass.circle")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 28, height: 28)
                 
-                Text("User Onlie: \(32)")
-                    .font(.headline)
+                ForEach(searchEnginModel) { engin in
+                    Text("Total: \(engin.total)")
+                        .font(.headline)
+                }
+                
             }
             .frame(width: UIScreen.main.bounds.width - 36, alignment: .leading)
-            .padding(.bottom, -2)
-
+            .padding(.bottom, 4)
+            
             VStack(alignment: .leading){
                 HStack{
+                    Image("")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
                     Text("")
                         .font(.ralewaySize16Bold)
-                        .frame(width: 105, alignment: .leading)
-                    
-                    Text("Visitors")
+                        .frame(width: 105, alignment: .center)
+                        
+                    Text("Today")
                         .font(.ralewaySize16Bold)
-                        .frame(width: 105, alignment: .leading)
-                        .fixedSize()
+                        .frame(width: 105, alignment: .center)
                     
-                    Text("Visitor")
+                    Text("Yesterday")
                         .font(.ralewaySize16Bold)
-                        .frame(width: 105, alignment: .leading)
+                        .frame(width: 105, alignment: .center)
                     
                     Spacer()
                 }
@@ -53,13 +53,13 @@ struct SummaryView: View {
                 .padding(.bottom, 12)
                 
                 
-                SummaryHeaderRowView(title: "Tody", visitorsCount: 48, visitorCount: 123, isShowDivider: true)
-                SummaryHeaderRowView(title: "Yesterday", visitorsCount: 854, visitorCount: 4231, isShowDivider: true)
-                SummaryHeaderRowView(title: "Week", visitorsCount: 24313, visitorCount: 23423, isShowDivider: true)
-                SummaryHeaderRowView(title: "Month", visitorsCount: 145060, visitorCount: 195832, isShowDivider: true)
-                SummaryHeaderRowView(title: "Year", visitorsCount: 8594323, visitorCount: 10243252, isShowDivider: true)
-                SummaryHeaderRowView(title: "Total", visitorsCount: 8943333411, visitorCount: 11323432232, isShowDivider: false)
-                    .padding(.bottom, 12)
+                ForEach(searchEnginModel) { engine in
+                    ForEach(engine.searchEngin) { engintype in
+                        SearchEnginesRowView(icon: engintype.icon, name: engintype.name, today: engintype.today, yesterday: engintype.yesterday, isShowDivider: true)
+                            //.padding(.bottom, 12)
+                    }
+                }
+                    
                 
                 
                 
@@ -88,24 +88,6 @@ struct SummaryView: View {
             .padding(.horizontal, 18)
             .padding(.bottom)
             .shadow(color: .black.opacity(0.08), radius: 2, x: 0, y: 0)
-            
-            VStack{
-                Text("Chart Box 1")
-                    .font(.ralewaySize16Bold)
-                    .padding()
-                //
-                //
-                //
-                //
-                Spacer()
-            }
-            .frame(width: UIScreen.main.bounds.width - 36 , alignment: .leading)
-            .background(Color.white)
-            .cornerRadius(16)
-            .padding(.horizontal, 18)
-            .padding(.bottom)
-            .shadow(color: .black.opacity(0.08), radius: 2, x: 0, y: 0)
-            
             
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
@@ -119,31 +101,36 @@ struct SummaryView: View {
             .navigationTitle("Summary")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .background(Color.red.opacity(0.5))
+//        .background(Color.red.opacity(0.5))
     }
 }
 
-
-struct SummaryHeaderRowView: View {
-    var title: String
-    var visitorsCount: Int
-    var visitorCount: Int
+struct SearchEnginesRowView: View {
+    var icon: String
+    var name: String
+    var today: Int
+    var yesterday: Int
     var isShowDivider: Bool
     
     var body: some View {
         HStack{
-            Text(title)
+            Image(icon)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 24, height: 24)
+            
+            Text(name)
                 .font(.ralewaySize16Bold)
                 .frame(width: 105, alignment: .leading)
-                
-            Text("\(visitorsCount)")
+            
+            Text("\(today)")
                 .font(.caption)
-                .frame(width: 110, alignment: .leading)
+                .frame(width: 110, alignment: .center)
                 .fixedSize()
             
-            Text("\(visitorCount)")
+            Text("\(yesterday)")
                 .font(.caption)
-                .frame(width: 110, alignment: .leading)
+                .frame(width: 110, alignment: .center)
             
             Spacer()
         }
@@ -158,8 +145,7 @@ struct SummaryHeaderRowView: View {
     }
 }
 
-struct SummaryView_Preview : PreviewProvider{
-    static var previews: some View{
-        SummaryView()
-    }
+
+#Preview {
+    SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
 }

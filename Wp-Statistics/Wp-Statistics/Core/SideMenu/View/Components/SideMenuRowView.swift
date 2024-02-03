@@ -30,7 +30,7 @@ struct SideMenuRowView: View {
         .padding(.leading)
         .foregroundStyle(isSelectedOption ? .primary : .primary)
         .frame(width: 216, height: 44)
-//        .background(isSelectedOption ? .menuSelection : .clear)
+        .background(isSelectedOption ? .menuSelection : .clear)
         .background(isSelectedOption ? .red : .clear)
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
