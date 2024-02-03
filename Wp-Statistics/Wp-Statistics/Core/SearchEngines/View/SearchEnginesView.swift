@@ -25,26 +25,26 @@ struct SearchEnginesView: View {
                 }
                 
             }
-            .frame(width: UIScreen.main.bounds.width - 36, alignment: .leading)
+            .frame(width: UIScreen.main.bounds.width - 36, alignment: .center)
             .padding(.bottom, 4)
             
-            VStack(alignment: .leading){
+            VStack(alignment: .center){
                 HStack{
                     Image("")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 24, height: 24)
+                        .frame(width: 24)
                     Text("")
                         .font(.ralewaySize16Bold)
-                        .frame(width: 105, alignment: .center)
-                        
+                        .frame(width: 77, alignment: .leading)
+                    
                     Text("Today")
                         .font(.ralewaySize16Bold)
-                        .frame(width: 105, alignment: .center)
+                        .frame(width: 97, alignment: .center)
                     
                     Text("Yesterday")
                         .font(.ralewaySize16Bold)
-                        .frame(width: 105, alignment: .center)
+                        .frame(width: 97, alignment: .center)
                     
                     Spacer()
                 }
@@ -64,7 +64,7 @@ struct SearchEnginesView: View {
                 
                 
             }
-            .frame(width: UIScreen.main.bounds.width - 36 , alignment: .leading)
+            .frame(width: UIScreen.main.bounds.width - 36 , alignment: .center)
             .background(Color.white)
             .cornerRadius(16)
             .padding(.horizontal, 18)
@@ -120,17 +120,16 @@ struct SearchEnginesRowView: View {
                 .frame(width: 24, height: 24)
             
             Text(name)
-                .font(.ralewaySize16Bold)
-                .frame(width: 105, alignment: .leading)
+                .font(.ralewaySize15Medium)
+                .frame(width: 77, alignment: .leading)
             
             Text("\(today)")
                 .font(.caption)
-                .frame(width: 110, alignment: .center)
-                .fixedSize()
+                .frame(width: 97, alignment: .center)
             
             Text("\(yesterday)")
                 .font(.caption)
-                .frame(width: 110, alignment: .center)
+                .frame(width: 97, alignment: .center)
             
             Spacer()
         }

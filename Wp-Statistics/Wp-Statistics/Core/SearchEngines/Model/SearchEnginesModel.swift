@@ -27,7 +27,7 @@ struct SearchEngines: Codable,Identifiable {
 
 extension SearchEnginesModel {
     static let searchEngine = SearchEnginesModel(total: 5002, searchEngin: [.init(name: "Bing", icon: "Bing", today: 243, yesterday: 764),
-                                                                            .init(name: "DuckDuckGo", icon: "DuckDuckGo", today: 43, yesterday: 32),
+                                                                            .init(name: "DuckDuck", icon: "DuckDuckGo", today: 43, yesterday: 32),
                                                                             .init(name: "Google", icon: "Google", today: 2352, yesterday: 8343),
                                                                             .init(name: "Yahoo", icon: "Yahoo", today: 43, yesterday: 32),
                                                                             .init(name: "Yandex", icon: "Yandex", today: 43, yesterday: 32)

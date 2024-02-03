@@ -96,7 +96,7 @@ struct WebsiteRowView: View {
                         
                         NavigationLink {
                             //VisitorsView(visitors: VisitorCellModel.visitors)
-                            SummaryView()
+                            SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
                                 .navigationBarBackButtonHidden()
                                 
                         } label: {
