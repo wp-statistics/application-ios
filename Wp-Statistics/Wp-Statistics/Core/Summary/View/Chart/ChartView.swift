@@ -20,7 +20,6 @@ struct ChartView: View{
                 pieChart(chartData: chartData.first!)
                     .padding()
             }
-            
         }
     }
 }
@@ -34,16 +33,7 @@ extension ChartView{
             Text("Summary")
                 .font(.headline)
                 .padding(.top)
-//            HStack{
-//
-//                Text("Visitors")
-//                    .font(.ralewaySize16Bold)
-//
-//                Spacer()
-//
-//                Text("Vistor")
-//                    .font(.ralewaySize16Bold)
-//            }
+
         }
     }
     
@@ -73,12 +63,13 @@ extension ChartView{
                     .gridCellUnsizedAxes([.horizontal])
             }
         }
+        
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
     func chartInfoTable(chartInfo: [ChartModel]) -> some View{
         
-        VStack(){
+        VStack{
             
             Grid(alignment: .leading, horizontalSpacing: 10, verticalSpacing: 10) {
                 chartInfoHeader
@@ -96,6 +87,7 @@ extension ChartView{
                 .shadow(radius: 4)
         }
         .padding()
+
     }
     
     func chartContainer(chartData: [ChartModel]) -> some View{
