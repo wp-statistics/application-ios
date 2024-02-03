@@ -17,6 +17,7 @@ struct ChartView: View{
                     .padding()
                 chartInfoTable(chartInfo: chartData)
                 chartContainer(chartData: chartData)
+                pieChart(chartData: chartData.first!)
                     .padding()
             }
         }
@@ -29,20 +30,10 @@ extension ChartView{
     
     var headerSection: some View{
         VStack(alignment: .leading, spacing: 8){
-            Text("User Onlie: 32")
+            Text("Summary")
                 .font(.headline)
                 .padding(.top)
-    
-            HStack{
-                
-                Text("Visitors")
-                    .font(.ralewaySize16Bold)
-                
-                Spacer()
-                
-                Text("Vistor")
-                    .font(.ralewaySize16Bold)
-            }
+
         }
     }
     
@@ -86,25 +77,95 @@ extension ChartView{
                     chartCell(cellInfo: info)
                 }
             }
-        }.padding()
-        
+            .padding()
+        }
+        .frame(height: 316)
+        .frame(maxWidth: .infinity)
+        .overlay {
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(.gray.opacity(0.6), lineWidth: 1)
+                .shadow(radius: 4)
+        }
+        .padding()
+
     }
     
     func chartContainer(chartData: [ChartModel]) -> some View{
-        
-        Chart(chartData) {
-            BarMark(x: .value("Title", $0.title), y: .value("Visitor", $0.visitorCount))
-                .foregroundStyle(.green)
-                .position(by: .value("VisitorCount", $0.visitorCount))
-            
-            BarMark(x: .value("Title", $0.title), y: .value("Visitors", $0.visitorsCount))
-                .foregroundStyle(.blue)
-                .position(by: .value("Visitors", $0.visitorsCount))
+        VStack(alignment: .leading, spacing: 8){
+            Text("Chart Title")
+                .frame(height: 24 ,alignment: .trailing)
+                .padding()
+            Rectangle()
+                .fill(.secondary)
+                .frame(height: 1)
+                .gridCellColumns(3)
+                .gridCellUnsizedAxes([.horizontal])
+            Chart(chartData) {
+                AreaMark(x: .value("Title", $0.title), y: .value("Visitor", $0.visitorCount))
+                    .foregroundStyle(.green)
+                    .position(by: .value("VisitorCount", $0.visitorCount))
+                
+                AreaMark(x: .value("Title", $0.title), y: .value("Visitors", $0.visitorsCount))
+                    .foregroundStyle(.blue)
+                    .position(by: .value("Visitors", $0.visitorsCount))
+            }
+            .padding()
         }
-        .foregroundStyle(.black)
+        .frame(height: 316)
+        .frame(maxWidth: .infinity)
+        .overlay {
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(.gray.opacity(0.6), lineWidth: 1)
+                .shadow(radius: 4)
+        }
         .padding()
-        .shadow(radius: 4)
-        .background(.white)
+    }
+    
+    func pieChart(chartData: ChartModel) -> some View{
+        VStack(alignment: .leading, spacing: 8){
+            Text("Chart Title")
+                .frame(height: 24 ,alignment: .trailing)
+                .padding()
+            Rectangle()
+                .fill(.secondary)
+                .frame(height: 1)
+                .gridCellColumns(3)
+                .gridCellUnsizedAxes([.horizontal])
+            VStack{
+                
+                Text("\(chartData.visitorsCount) Vistors")
+                HStack{
+                    PieChart(slices: [
+                        (Double(chartData.visitorsCount), .blue),
+                        (Double(chartData.visitorCount), .green)
+                    ])
+                    .frame(width: UIScreen.main.bounds.width * 0.5, alignment: .leading)
+                    VStack(alignment: .leading, spacing: 12){
+                        HStack(spacing: 8){
+                            RoundedRectangle(cornerRadius: 4.0)
+                                .fill(.blue)
+                                .frame(width: 19, height: 8)
+                            Text("Visitors")
+                        }
+                        HStack(spacing: 8){
+                            RoundedRectangle(cornerRadius: 4.0)
+                                .fill(.green)
+                                .frame(width: 19, height: 8)
+                            Text("Visits")
+                        }
+                    }
+                }
+                Text(" \(chartData.visitorCount) Vists")
+            }
+            .padding()
+        }
+        .frame(height: 286)
+        .frame(maxWidth: .infinity)
+        .overlay {
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(.gray.opacity(0.6), lineWidth: 1)
+                .shadow(radius: 4)
+        }
     }
 }
 
