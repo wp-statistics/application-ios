@@ -12,9 +12,8 @@ struct ChartView: View{
     let chartData: [ChartModel]
     var body: some View{
         ScrollView{
-            VStack(spacing: 16){
+            VStack(spacing: 32){
                 headerSection
-                    .padding()
                 chartInfoTable(chartInfo: chartData)
                 chartContainer(chartData: chartData)
                 pieChart(chartData: chartData.first!)
@@ -83,10 +82,10 @@ extension ChartView{
         .frame(maxWidth: .infinity)
         .overlay {
             RoundedRectangle(cornerRadius: 8)
-                .stroke(.gray.opacity(0.6), lineWidth: 1)
-                .shadow(radius: 4)
+                .stroke(.white, lineWidth: 1)
+                .shadow(radius: 1)
         }
-        .padding()
+        .padding([.leading, .trailing], 44)
 
     }
     
@@ -94,6 +93,7 @@ extension ChartView{
         VStack(alignment: .leading, spacing: 8){
             Text("Chart Title")
                 .frame(height: 24 ,alignment: .trailing)
+                .font(.ralewaySize16Bold)
                 .padding()
             Rectangle()
                 .fill(.secondary)
@@ -115,16 +115,17 @@ extension ChartView{
         .frame(maxWidth: .infinity)
         .overlay {
             RoundedRectangle(cornerRadius: 8)
-                .stroke(.gray.opacity(0.6), lineWidth: 1)
-                .shadow(radius: 4)
+                .stroke(.white, lineWidth: 1)
+                .shadow(radius: 1)
         }
-        .padding()
+        .padding([.trailing, .leading], 20)
     }
     
     func pieChart(chartData: ChartModel) -> some View{
         VStack(alignment: .leading, spacing: 8){
             Text("Chart Title")
                 .frame(height: 24 ,alignment: .trailing)
+                .font(.ralewaySize16Bold)
                 .padding()
             Rectangle()
                 .fill(.secondary)
@@ -157,14 +158,14 @@ extension ChartView{
                 }
                 Text(" \(chartData.visitorCount) Vists")
             }
-            .padding()
+            .padding([.trailing, .leading], 20)
         }
         .frame(height: 286)
         .frame(maxWidth: .infinity)
         .overlay {
             RoundedRectangle(cornerRadius: 8)
-                .stroke(.gray.opacity(0.6), lineWidth: 1)
-                .shadow(radius: 4)
+                .stroke(.white, lineWidth: 1)
+                .shadow(radius: 1)
         }
     }
 }
