@@ -143,8 +143,12 @@ struct SearchEnginesRowView: View {
         }
     }
 }
-
-
-#Preview {
-    SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
+struct SearchEnginesView_Preview: PreviewProvider{
+    static var previews: some View{
+        SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
+    }
 }
+
+//#Preview {
+//    SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
+//}
