@@ -12,7 +12,7 @@ struct ChartModel: Identifiable{
     let title: String
     let visitorsCount: Int
     let visitorCount: Int
-    let isShowDivider: Bool
+//    let isShowDivider: Bool
 }
 
 
