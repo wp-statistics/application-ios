@@ -25,7 +25,8 @@ struct HomeView: View {
             }
             .frame(width: UIScreen.main.bounds.width - 36,alignment: .leading)
         }
-        .toolbar(.hidden, for: .tabBar)
+        //the below line make the tabbar in MainView hidden
+//        .toolbar(.hidden, for: .tabBar)
     }
 }
 
