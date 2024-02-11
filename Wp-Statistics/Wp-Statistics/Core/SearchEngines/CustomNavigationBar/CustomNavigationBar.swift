@@ -42,15 +42,14 @@ extension CustomNavigationBar{
         Button {
             presantionMode.wrappedValue.dismiss()
         } label: {
-            Image(systemName: "arrow.backward.circle.fill")
+            Image(systemName: "chevron.left")
                 .resizable()
                 .scaledToFit()
-                .foregroundColor(Color.gray)
                 .opacity(showBackButton ? 1.0 : 0.0)
         }
     }
     private var logoImage: some View{
-        Image("appLogo")
+        Image("Logo")
             .resizable()
             .scaledToFit()
     }
