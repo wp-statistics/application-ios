@@ -94,23 +94,33 @@ struct WebsiteRowView: View {
                         }
                         
                         Spacer()
-                        
-                        NavigationLink {
-                            //VisitorsView(visitors: VisitorCellModel.visitors)
-                            SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
-                                .navigationBarBackButtonHidden()
+                        CustomNavigationLink(destination: SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
+                            .navigationBarBackButtonHidden()) {
+                                Text("Show more")
+                                    .font(.ralewaySize16Bold)
                                 
-                        } label: {
-                            Text("Show more")
-                                .font(.ralewaySize16Bold)
-                            
-                            Image(systemName: "arrow.right")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 24)
+                                Image(systemName: "arrow.right")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 24)
+                            }
                         }
-                        .tint(.black)
-                    }
+//                        NavigationLink {
+//                            //VisitorsView(visitors: VisitorCellModel.visitors)
+//                            SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
+//                                .navigationBarBackButtonHidden()
+//
+//                        } label: {
+//                            Text("Show more")
+//                                .font(.ralewaySize16Bold)
+//                            
+//                            Image(systemName: "arrow.right")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 24)
+//                        }
+//                        .tint(.black)
+//                    }
                     
                     .padding(.top, 8)
                     .padding(.horizontal)

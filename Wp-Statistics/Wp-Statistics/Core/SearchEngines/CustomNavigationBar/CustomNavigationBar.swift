@@ -46,6 +46,7 @@ extension CustomNavigationBar{
                 .resizable()
                 .scaledToFit()
                 .opacity(showBackButton ? 1.0 : 0.0)
+                .frame(width: 24, height: 24)
         }
     }
     private var logoImage: some View{
