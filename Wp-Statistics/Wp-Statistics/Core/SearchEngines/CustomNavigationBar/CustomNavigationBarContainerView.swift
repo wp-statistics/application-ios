@@ -12,14 +12,18 @@ struct CustomNavigationBarContainerView<Content : View>: View {
     @State private var showBackButton: Bool = true
     @State private var isLoggedIn: Bool = true
     @State private var isProfileView: Bool = true
+    @State private var navTitle: String = ""
     init(@ViewBuilder content: () -> Content) {
         self.content = content()
     }
     var body: some View {
         VStack(spacing: 0){
-            CustomNavigationBar(isLoggedIn: isLoggedIn, showBackButton: showBackButton, isProfileView: isProfileView)
+            CustomNavigationBar(isLoggedIn: isLoggedIn, showBackButton: showBackButton, isProfileView: isProfileView, title: navTitle)
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .onPreferenceChange(CustomNavBarTitlePreferenceKey.self){ title in
+            self.navTitle = title
         }
         .onPreferenceChange(CustomNavBarShowBackButtonPreferenceKey.self) { backButtonStatus in
             self.showBackButton = backButtonStatus
