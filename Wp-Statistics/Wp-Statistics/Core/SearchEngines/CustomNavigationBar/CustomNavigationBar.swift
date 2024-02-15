@@ -12,6 +12,8 @@ struct CustomNavigationBar: View {
     let isLoggedIn: Bool
     let showBackButton: Bool
     let isProfileView: Bool
+    let title: String
+    
     
     var body: some View {
             HStack{
@@ -19,7 +21,7 @@ struct CustomNavigationBar: View {
                     backButton
                 }
                 Spacer()
-                logoImage
+                navigationTitle
                 Spacer()
                 if isLoggedIn{
                     profileImage
@@ -33,7 +35,7 @@ struct CustomNavigationBar: View {
 
 struct CustomNavigationBar_Previews: PreviewProvider {
     static var previews: some View {
-        CustomNavigationBar(isLoggedIn: true, showBackButton: true, isProfileView: false)
+        CustomNavigationBar(isLoggedIn: true, showBackButton: true, isProfileView: false, title: "test")
     }
 }
 
@@ -46,13 +48,17 @@ extension CustomNavigationBar{
                 .resizable()
                 .scaledToFit()
                 .opacity(showBackButton ? 1.0 : 0.0)
-                .frame(width: 24, height: 24)
+                .frame(width: 16, height: 16)
+                .foregroundColor(.primary)
         }
     }
-    private var logoImage: some View{
-        Image("Logo")
-            .resizable()
-            .scaledToFit()
+    private var navigationTitle: some View{
+        Text(title)
+            .font(.ralewaySize16Bold)
+            .foregroundColor(.primary)
+//        Image("Logo")
+//            .resizable()
+//            .scaledToFit()
     }
     
     private var profileImage: some View{

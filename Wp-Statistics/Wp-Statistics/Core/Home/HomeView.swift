@@ -95,15 +95,16 @@ struct WebsiteRowView: View {
                         
                         Spacer()
                         CustomNavigationLink(destination: SearchEnginesView(searchEnginModel: [SearchEnginesModel.searchEngine])
-                            .navigationBarBackButtonHidden()) {
+                            .navBarTitle("Summary")
+                        ) {
                                 Text("Show more")
                                     .font(.ralewaySize16Bold)
-                                
                                 Image(systemName: "arrow.right")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 24)
                             }
+                        .foregroundColor(.primary)
                         }
 //                        NavigationLink {
 //                            //VisitorsView(visitors: VisitorCellModel.visitors)

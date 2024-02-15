@@ -30,6 +30,12 @@ struct CustomNavBarIsProfileViewPreferenceKey: PreferenceKey{
         value = nextValue()
     }
 }
+struct CustomNavBarTitlePreferenceKey: PreferenceKey{
+    static var defaultValue: String = ""
+    static func reduce(value: inout String, nextValue: () -> String) {
+        value = nextValue()
+    }
+}
 
 
 extension View{
@@ -44,10 +50,15 @@ extension View{
         preference(key: CustomNavBarIsProfileViewPreferenceKey.self, value: isProfile)
     }
     
-    func customNavBarItems(showButtonHidden: Bool = false, loggedIn: Bool = true, isProfile: Bool = false) -> some View{
+    func navBarTitle(_ title: String) -> some View{
+        preference(key: CustomNavBarTitlePreferenceKey.self, value: title)
+    }
+    func customNavBarItems(title: String = "", showButtonHidden: Bool = false, loggedIn: Bool = true, isProfile: Bool = false) -> some View{
         self
             .showBackButton(showButtonHidden)
+            .navBarTitle(title)
             .isLoggedin(loggedIn)
             .isProfileView(isProfile)
+            
     }
 }

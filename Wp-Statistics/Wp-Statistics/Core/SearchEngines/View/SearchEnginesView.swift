@@ -89,17 +89,17 @@ struct SearchEnginesView: View {
             .padding(.bottom)
             .shadow(color: .black.opacity(0.08), radius: 2, x: 0, y: 0)
             
-            .toolbar{
-                ToolbarItem(placement: .topBarLeading) {
-                    Image(systemName: "chevron.left")
-                        .imageScale(.large)
-                        .onTapGesture {
-                            dismiss()
-                        }
-                }
-            }
-            .navigationTitle("Summary")
-            .navigationBarTitleDisplayMode(.inline)
+//            .toolbar{
+//                ToolbarItem(placement: .topBarLeading) {
+//                    Image(systemName: "chevron.left")
+//                        .imageScale(.large)
+//                        .onTapGesture {
+//                            dismiss()
+//                        }
+//                }
+//            }
+//            .navigationTitle("Summary")
+//            .navigationBarTitleDisplayMode(.inline)
         }
 //        .background(Color.red.opacity(0.5))
     }
